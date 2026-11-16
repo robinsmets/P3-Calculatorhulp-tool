@@ -23,9 +23,22 @@ dan eerst, anders staan er twee panelen.
 
 ## Bijwerken
 
-Download de nieuwe zip, verwijder in `chrome://extensions` de oude versie en
-laad de nieuwe map zoals hierboven. Het versienummer staat in het
-extensie-venster (klik op het icoon in de werkbalk).
+**Op een Mac, automatisch:** open Terminal (via Spotlight: Cmd + spatie, typ
+"Terminal"), plak deze regel en druk op Enter:
+
+```
+curl -fsSL https://raw.githubusercontent.com/robinsmets/P3-Calculatorhulp-tool/main/update-mac.sh | bash
+```
+
+De eerste keer vraagt hij om de map van de extensie: sleep die map in het
+Terminal-venster en druk op Enter. Daarna onthoudt hij de map. Hij haalt de
+nieuwste versie op en vervangt de bestanden in die map. Klik daarna in
+`chrome://extensions` bij de extensie op het rondje (opnieuw laden).
+
+**Met de hand:** download de nieuwe zip en vervang de bestanden in je
+extensiemap door die uit de zip. Klik daarna in `chrome://extensions` op
+opnieuw laden. Het versienummer staat in het extensie-venster (klik op het
+icoon in de werkbalk).
 
 ## BTW-check
 
