@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "P3-Calculatorhulp-tool",
+  "version": "2.6.5",
+  "description": "Toont bij het calculeren automatisch de totale wand-/geveloppervlakte voor stucloper/afwerklaag, optioneel het aantal parkeeruren, en optioneel een correctie-check.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.deatabix.nl/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.deatabix.nl/*"
+      ],
+      "js": [
+        "content-loader.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/*",
+        "config.js"
+      ],
+      "matches": [
+        "https://*.deatabix.nl/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "P3-Calculatorhulp-tool"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "p3-calculatorhulp-tool@local",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
